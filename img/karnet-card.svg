@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Karta karnetu TitanGYM">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8F0FA"/>
+      <stop offset="50%" stop-color="#D4E4F7"/>
+      <stop offset="100%" stop-color="#B8CCE8"/>
+    </linearGradient>
+    <linearGradient id="stripeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5C6B7A"/>
+      <stop offset="100%" stop-color="#393C41"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#171A20" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="250" rx="16" fill="#F7F7F7"/>
+
+  <g filter="url(#shadow)" transform="translate(30, 35)">
+    <rect width="340" height="180" rx="12" fill="url(#cardGrad)"/>
+    <rect x="300" y="0" width="40" height="180" rx="0 12 12 0" fill="url(#stripeGrad)"/>
+
+    <text x="24" y="36" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#393C41" letter-spacing="2">TITAN</text>
+    <text x="68" y="36" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#5B8FD4" letter-spacing="2">GYM</text>
+
+    <text x="24" y="100" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="600" fill="#171A20" letter-spacing="-1">KARNET</text>
+
+    <text x="24" y="130" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="500" fill="#5C5E62" letter-spacing="1.5">MEMBERSHIP CARD</text>
+    <text x="24" y="158" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="500" fill="#393C41">MEMBER: TITAN MEMBER</text>
+    <text x="24" y="174" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="400" fill="#5C5E62">VALID THRU 12.27</text>
+
+    <text x="310" y="90" font-family="Inter, Arial, sans-serif" font-size="7" font-weight="600" fill="#FFFFFF" letter-spacing="1" transform="rotate(90 310 90)">TITAN GYM</text>
+
+    <rect x="250" y="140" width="36" height="36" rx="4" fill="#FFFFFF" opacity="0.9"/>
+    <rect x="254" y="144" width="6" height="6" fill="#171A20"/>
+    <rect x="262" y="144" width="6" height="6" fill="#171A20"/>
+    <rect x="270" y="144" width="6" height="6" fill="#171A20"/>
+    <rect x="254" y="152" width="6" height="6" fill="#171A20"/>
+    <rect x="270" y="152" width="6" height="6" fill="#171A20"/>
+    <rect x="254" y="160" width="6" height="6" fill="#171A20"/>
+    <rect x="262" y="160" width="6" height="6" fill="#171A20"/>
+    <rect x="270" y="160" width="6" height="6" fill="#171A20"/>
+    <rect x="262" y="168" width="6" height="6" fill="#171A20"/>
+
+    <text x="250" y="130" font-family="Inter, Arial, sans-serif" font-size="7" font-weight="500" fill="#5C5E62" letter-spacing="0.5">SCAN FOR ACCESS</text>
+  </g>
+</svg>

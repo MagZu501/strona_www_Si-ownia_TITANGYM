@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>TitanGYM | Klub Fitness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TitanGYM — nowoczesny klub fitness. Siłownia, cardio, joga. Dołącz do nas i trenuj w miejscu, które motywuje.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="header">
+  <div class="header-inner">
+    <a href="#hero" class="logo">
+      <span class="logo-main">TITAN</span><span class="logo-accent">GYM</span>
+    </a>
+    <nav id="nav">
+      <a href="#oferta">Oferta</a>
+      <a href="#onas">O nas</a>
+      <a href="#cennik">Cennik</a>
+      <a href="#opinie">Opinie</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ── Hero ── -->
+  <section id="hero" class="panel panel-hero">
+    <div class="panel-bg" style="background-image: url('img/hero.jpg')"></div>
+    <div class="hero-spotlight" aria-hidden="true"></div>
+    <span class="panel-label panel-label-tl">STREFA 01 / SIŁA</span>
+    <div class="panel-content">
+      <span class="ghost-text" aria-hidden="true">Siła. Forma. Konsekwencja.</span>
+      <h1 class="split-reveal">Twoja siła.<br>Twoja forma.</h1>
+      <p class="panel-sub">Nowoczesny klub fitness w sercu miasta</p>
+      <div class="live-badge">
+        <span class="live-dot"></span>
+        <span><strong data-count-live="24">24</strong> osoby trenują teraz</span>
+      </div>
+      <div class="panel-actions">
+        <a href="#cennik" class="btn btn-primary">Zobacz cennik</a>
+        <a href="#kontakt" class="btn btn-secondary">Skontaktuj się</a>
+      </div>
+      <div class="hero-signoff">
+        <span class="signature">TitanGYM</span>
+        <div>
+          <strong>Zespół TitanGYM</strong>
+          <span>Trenerzy klubu od 2006</span>
+        </div>
+      </div>
+    </div>
+    <div class="panel-infobar">
+      <span class="infobar-label">NAJBLIŻSZE ZAJĘCIA</span>
+      <span class="infobar-value">Cardio HIIT &middot; dziś 18:00</span>
+      <a href="#kontakt" class="btn btn-mini" onclick="openContactModal(); return false;">Dołącz</a>
+    </div>
+  </section>
+
+  <!-- ── Oferta: Cardio ── -->
+  <section id="oferta" class="panel panel-offer" data-training="cardio">
+    <div class="panel-bg" style="background-image: url('img/cardio.jpg')"></div>
+    <span class="panel-label panel-label-tl">02 / 03</span>
+    <span class="panel-label panel-label-tr">TĘTNO MONITOROWANE NA ŻYWO</span>
+    <span class="panel-label panel-label-bl">SPALANIE &middot; WYTRZYMAŁOŚĆ</span>
+    <div class="panel-content">
+      <h2>Treningi cardio</h2>
+      <p class="panel-sub">Spalaj kalorie i buduj kondycję na bieżniach, rowerach i orbitrekach.</p>
+      <div class="panel-actions">
+        <button class="btn btn-primary" onclick="openTrainingModal('cardio')">Dowiedz się więcej</button>
+        <a href="#cennik" class="btn btn-secondary">Zobacz cennik</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Oferta: Siłownia ── -->
+  <section class="panel panel-offer" data-training="silownia">
+    <div class="panel-bg" style="background-image: url('img/silownia.jpg')"></div>
+    <span class="panel-label panel-label-tl">03 / 03</span>
+    <span class="panel-label panel-label-tr">12 STANOWISK &middot; WOLNE CIĘŻARY</span>
+    <span class="panel-label panel-label-bl">SIŁA &middot; PRECYZJA</span>
+    <div class="panel-content">
+      <h2>Siłownia</h2>
+      <p class="panel-sub">Wolne ciężary, maszyny i profesjonalna asysta trenerów.</p>
+      <div class="panel-actions">
+        <button class="btn btn-primary" onclick="openTrainingModal('silownia')">Dowiedz się więcej</button>
+        <a href="#cennik" class="btn btn-secondary">Zobacz cennik</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Oferta: Joga ── -->
+  <section class="panel panel-offer" data-training="joga">
+    <div class="panel-bg" style="background-image: url('img/joga.jpg')"></div>
+    <span class="panel-label panel-label-tl">01 / 03</span>
+    <span class="panel-label panel-label-tr">SPOKÓJ &middot; ODDECH &middot; RUCH</span>
+    <span class="panel-label panel-label-bl">RÓWNOWAGA CIAŁA I UMYSŁU</span>
+    <div class="panel-content">
+      <h2>Joga i relaks</h2>
+      <p class="panel-sub">Odzyskaj równowagę, elastyczność i spokój umysłu.</p>
+      <div class="panel-actions">
+        <button class="btn btn-primary" onclick="openTrainingModal('joga')">Dowiedz się więcej</button>
+        <a href="#cennik" class="btn btn-secondary">Zobacz cennik</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── O nas (ciemne tło, asymetryczny layout, bento-grid statystyk) ── -->
+  <section id="onas" class="section-about">
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="img/about.jpg" alt="Wnętrze klubu fitness TitanGYM">
+      </div>
+      <div class="about-text" data-reveal>
+        <span class="label">O nas</span>
+        <h2>Trenuj z pasją od 2006 roku</h2>
+        <p>TitanGYM zaczynał jako klub stworzony z myślą o równowadze między ciałem a umysłem. Dziś jesteśmy nowoczesnym miejscem dla wszystkich — kobiet i mężczyzn — którzy chcą trenować efektywnie, w miłej atmosferze i z profesjonalnym wsparciem.</p>
+        <p>Oferujemy siłownię, zajęcia cardio oraz jogę i relaks. Nasz zespół trenerów pomoże Ci osiągnąć cele — niezależnie od tego, czy dopiero zaczynasz, czy trenujesz od lat.</p>
+        <!-- Bento-grid statystyk: data-count uruchamia count-up animation -->
+        <ul class="about-stats bento-grid">
+          <li class="bento-full">
+            <strong data-count="18" data-suffix="+">18+</strong>
+            <span>lat doświadczenia</span>
+          </li>
+          <li>
+            <strong data-count="3">3</strong>
+            <span>strefy treningowe</span>
+          </li>
+          <li>
+            <strong data-count="12">12</strong>
+            <span>trenerów</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Cennik ── -->
+  <section id="cennik" class="section-pricing">
+    <div class="section-header" data-reveal>
+      <span class="label">Cennik</span>
+      <h2>Wybierz swój plan</h2>
+      <p>Elastyczne karnety dopasowane do Twojego stylu życia</p>
+    </div>
+
+    <div class="pricing-grid">
+      <article class="price-card" data-reveal>
+        <span class="price-tag">Jednorazowo</span>
+        <h3>Pojedyncze wejście</h3>
+        <div class="price-amount"><span class="price-value">35</span><span class="price-currency">zł</span></div>
+        <p class="price-desc">Idealne, gdy chcesz spróbować lub trenujesz od czasu do czasu.</p>
+        <ul class="price-features">
+          <li>Dostęp do siłowni</li>
+          <li>Dostęp do strefy cardio</li>
+          <li>Szafka na czas wizyty</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-outline">Zapytaj o szczegóły</a>
+      </article>
+
+      <article class="price-card" data-reveal>
+        <span class="price-tag">Miesięczny</span>
+        <h3>Karnet Open</h3>
+        <div class="price-amount"><span class="price-value">149</span><span class="price-currency">zł / mies.</span></div>
+        <p class="price-desc">Pełny dostęp do klubu bez ograniczeń liczby wizyt.</p>
+        <ul class="price-features">
+          <li>Siłownia i cardio bez limitu</li>
+          <li>Zajęcia grupowe w cenie</li>
+          <li>Plan treningowy na start</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-outline">Zapytaj o szczegóły</a>
+      </article>
+
+      <article class="price-card price-card-featured" data-reveal>
+        <span class="price-badge">Najpopularniejszy</span>
+        <span class="price-tag">3 miesiące</span>
+        <h3>Karnet Titan</h3>
+        <div class="price-amount"><span class="price-value">399</span><span class="price-currency">zł / 3 mies.</span></div>
+        <p class="price-desc">Najlepszy stosunek ceny do jakości — oszczędzasz 48 zł.</p>
+        <ul class="price-features">
+          <li>Wszystko z karnetu Open</li>
+          <li>1 konsultacja z trenerem</li>
+          <li>Priorytetowy dostęp do zajęć</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-primary">Zapytaj o szczegóły</a>
+      </article>
+
+      <article class="price-card" data-reveal>
+        <span class="price-tag">Roczny</span>
+        <h3>Karnet Pro</h3>
+        <div class="price-amount"><span class="price-value">1299</span><span class="price-currency">zł / rok</span></div>
+        <p class="price-desc">Maksymalna oszczędność dla stałych bywalców.</p>
+        <ul class="price-features">
+          <li>Wszystko z karnetu Titan</li>
+          <li>2 treningi personalne gratis</li>
+          <li>Rabat 15% na suplementy</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-outline">Zapytaj o szczegóły</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── Opinie (ciemne tło, karuzela ze strzałkami i kropkami) ── -->
+  <section id="opinie" class="section-opinions">
+    <div class="section-header" data-reveal>
+      <span class="label">Opinie</span>
+      <h2>Co mówią nasi członkowie</h2>
+    </div>
+    <div class="opinions-wrapper">
+      <div id="opinionsGrid" class="opinions-track"></div>
+      <!-- Nawigacja karuzeli generowana przez JS -->
+      <div class="opinions-nav">
+        <button class="opinions-prev" id="opinionsPrev" aria-label="Poprzednia opinia">&#8592;</button>
+        <div class="opinions-dots" id="opinionsDots"></div>
+        <button class="opinions-next" id="opinionsNext" aria-label="Następna opinia">&#8594;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Kontakt ── -->
+  <section id="kontakt" class="section-contact">
+    <div class="contact-grid">
+      <div class="contact-info" data-reveal>
+        <span class="label">Kontakt</span>
+        <h2>Odwiedź nas</h2>
+        <div class="contact-details">
+          <div class="contact-item">
+            <strong>Adres</strong>
+            <p>ul. Sportowa 12, 00-001 Warszawa</p>
+          </div>
+          <div class="contact-item">
+            <strong>Telefon</strong>
+            <p><a href="tel:+48221234567">+48 22 123 45 67</a></p>
+          </div>
+          <div class="contact-item">
+            <strong>E-mail</strong>
+            <p><a href="mailto:kontakt@titangym.pl">kontakt@titangym.pl</a></p>
+          </div>
+          <div class="contact-item">
+            <strong>Godziny otwarcia</strong>
+            <p>Pon–Pt: 6:00 – 22:00<br>Sob–Ndz: 8:00 – 20:00</p>
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="openContactModal()">Napisz do nas</button>
+      </div>
+      <div class="contact-map">
+        <iframe
+          src="https://maps.google.com/maps?q=ul.+Sportowa+12,+00-001+Warszawa&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+          title="Lokalizacja TitanGYM — ul. Sportowa 12, Warszawa"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <a href="#hero" class="logo logo-footer">
+      <span class="logo-main">TITAN</span><span class="logo-accent">GYM</span>
+    </a>
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="TitanGYM na Facebooku">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="TitanGYM na Instagramie">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.21.6 1.76 1.15.55.55.89 1.1 1.15 1.76.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.76 4.9 4.9 0 0 1-1.76 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.76-1.15 4.9 4.9 0 0 1-1.15-1.76c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.21 1.15-1.76A4.9 4.9 0 0 1 5.44.54C6.08.29 6.81.12 7.87.07 8.93.02 9.27 0 12 0zm0 5a7 7 0 1 0 0 14 7 7 0 0 0 0-14zm0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm7.2-.65a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg>
+      </a>
+    </div>
+    <div class="footer-copy">
+      <div>Copyright &copy; 2026 magweb.pl</div>
+      <div>Wszelkie prawa zastrzeżone</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Modal: kontakt ── -->
+<div id="contactModal" class="modal" hidden>
+  <div class="modal-backdrop" onclick="closeContactModal()"></div>
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeContactModal()" aria-label="Zamknij">&times;</button>
+    <h2>Napisz do nas</h2>
+    <p class="modal-sub">Odpowiemy najszybciej jak to możliwe.</p>
+    <form id="contactForm" novalidate>
+      <div class="form-field">
+        <label for="imie">Imię</label>
+        <input type="text" id="imie" placeholder="Twoje imię" required>
+        <small class="error" id="err-imie"></small>
+      </div>
+      <div class="form-field">
+        <label for="email">Adres e-mail</label>
+        <input type="email" id="email" placeholder="twoj@email.pl" required>
+        <small class="error" id="err-email"></small>
+      </div>
+      <div class="form-field">
+        <label for="temat">Temat</label>
+        <select id="temat" required>
+          <option value="">Wybierz temat</option>
+          <option value="Karnety i ceny">Karnety i ceny</option>
+          <option value="Zajęcia grupowe">Zajęcia grupowe</option>
+          <option value="Sprzęt i infrastruktura">Sprzęt i infrastruktura</option>
+          <option value="Inne">Inne</option>
+        </select>
+        <small class="error" id="err-temat"></small>
+      </div>
+      <div class="form-field">
+        <label for="wiadomosc">Wiadomość</label>
+        <textarea id="wiadomosc" rows="5" placeholder="Twoja wiadomość..." required></textarea>
+        <small class="error" id="err-wiadomosc"></small>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full">Wyślij wiadomość</button>
+      <p id="contactMsg" class="form-msg"></p>
+    </form>
+  </div>
+</div>
+
+<!-- ── Modal: trening ── -->
+<div id="trainingModal" class="modal" hidden>
+  <div class="modal-backdrop" onclick="closeTrainingModal()"></div>
+  <div class="modal-box modal-training">
+    <button class="modal-close" onclick="closeTrainingModal()" aria-label="Zamknij">&times;</button>
+    <img id="trainingImg" src="" alt="">
+    <h2 id="trainingTitle"></h2>
+    <div id="trainingDesc"></div>
+    <button class="btn btn-primary btn-full" onclick="closeTrainingModal()">Zamknij</button>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
