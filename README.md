@@ -1,10 +1,10 @@
 # strona_www_Si-ownia_TITANGYM
 Strona internetowa klubu fitness TitanGYM – responsywna wizytówka z animacjami i interaktywnymi modalami (HTML, CSS, JavaScript)
-# Remonty Renowa — Pracownia Remontowa | Lublin
+# TitanGYM | Klub Fitness
 
-**Nowoczesna wizytówka firmy remontowej działającej w Lublinie i okolicach.**
+**Nowoczesna strona internetowa klubu fitness w Warszawie.**
 
-Remonty mieszkań, domów i łazienek — wycena w 48h, gwarancja na piśmie, harmonogram pod kontrolą.
+Siłownia, cardio i joga — trenuj w miejscu, które motywuje.
 
 ![Zrzut ekranu strony](img/silownia.PNG)
 
@@ -12,63 +12,95 @@ Remonty mieszkań, domów i łazienek — wycena w 48h, gwarancja na piśmie, ha
 
 ## 📍 Lokalizacja
 
-**Remonty Renowa Sp. z o.o.**
-ul. Spadochroniarzy 14
-Lublin
+**TitanGYM**
+ul. Sportowa 12, 00-001 Warszawa
 
 ---
 
-## ✨ Co oferujemy
+## 💪 Co oferujemy
 
-- Remonty mieszkań i domów
-- Remonty łazienek i kuchni
-- Wykończenia wnętrz "pod klucz"
-- Remonty lokali usługowych
-- Elewacje i remonty zewnętrzne
-- Układanie podłóg
+- Treningi cardio (bieżnie, rowery, orbitreki, HIIT, spinning)
+- Siłownia (wolne ciężary, maszyny, strefa crossfit i TRX)
+- Joga i relaks (hatha, vinyasa, stretching, medytacja)
+- Elastyczne karnety dopasowane do stylu życia
+- Wsparcie doświadczonych trenerów
 
 ---
 
 ## 🖥️ Podgląd strony
 
-Strona internetowa została stworzona jako nowoczesna, responsywna wizytówka firmy remontowej.
+Strona internetowa została stworzona jako nowoczesna, w pełni responsywna wizytówka klubu fitness z animacjami, panelami pełnoekranowymi i interaktywnym formularzem kontaktowym.
 
-**Link do strony:** [remontyrenowa.netlify.app](https://remontyrenowa.netlify.app/)
+**Link do strony:** _(https://titangymwawa.netlify.app/)_
 
 ---
 
 ## 🛠️ Technologie
 
-- HTML5 + CSS3
-- [Tailwind CSS](https://tailwindcss.com/) (CDN)
-- JavaScript (animacje, karuzela, licznik, menu mobilne)
-- Font Awesome (ikony)
-- Responsywny design (działa na telefonie, tablecie i komputerze)
+- HTML5 + CSS3 (własne style, bez frameworków)
+- JavaScript (vanilla JS)
+- Fonty Google: Inter, Space Grotesk
+
+### Funkcjonalności JS
+
+- Dynamiczne modale z opisem treningów (cardio, siłownia, joga)
+- Walidacja formularza kontaktowego w czasie rzeczywistym
+- Karuzela opinii klientów z nawigacją i kropkami
+- Animowane liczniki statystyk (count-up przy wejściu w viewport)
+- Scroll-reveal — elementy pojawiają się przy przewijaniu
+- Efekt tilt 3D i spotlight w sekcji hero podążający za kursorem
+- Magnetyczne przyciski reagujące na ruch myszy
+- Parallax na zdjęciach paneli
+- Licznik osób trenujących na żywo (odświeżany cyklicznie)
+- Zmiana koloru nagłówka w zależności od widocznej sekcji
+- Responsywne menu mobilne
+
+---
+
+## 📁 Struktura projektu
+
+```
+.
+├── index.html
+├── style.css
+├── script.js
+├── img/
+│   ├── hero.jpg
+│   ├── cardio.jpg
+│   ├── silownia.jpg
+│   ├── joga.jpg
+│   └── about.jpg
+└── README.md
+```
 
 ---
 
 ## 🚀 Jak uruchomić lokalnie
 
 1. Pobierz lub sklonuj repozytorium
-2. Otwórz plik `index.html` w przeglądarce
-
-Lub po prostu kliknij dwukrotnie w plik `index.html`.
+2. Upewnij się, że folder `img` znajduje się obok `index.html`
+3. Otwórz plik `index.html` w przeglądarce
 
 ---
 
-## 🏗️ O firmie
+## 🏗️ O klubie
 
-Remonty Renowa to pracownia remontowa specjalizująca się w kompleksowej realizacji remontów mieszkań, domów i lokali w Lublinie i okolicach. Firma dba o dotrzymywanie terminów, przejrzysty kosztorys i stały kontakt z klientem na każdym etapie prac.
+TitanGYM działa od 2006 roku i oferuje kompleksowe podejście do treningu — siłownię, zajęcia cardio oraz jogę i relaks. Zespół doświadczonych trenerów wspiera zarówno początkujących, jak i zaawansowanych podopiecznych w osiąganiu ich celów.
 
 ---
 
 ## 📞 Kontakt
 
-- **Telefon:** +48 81 400 50 60
-- **E-mail:** kontakt@remontyrenowa.pl
-- **Adres:** ul. Spadochroniarzy 14, Lublin
+- **Telefon:** +48 22 123 45 67
+- **E-mail:** kontakt@titangym.pl
+- **Adres:** ul. Sportowa 12, 00-001 Warszawa
 
 ---
+
+## 📄 Licencja
+
+© 2026 TitanGYM — projekt portfolio, dane fikcyjne. Wszystkie prawa zastrzeżone.
+
 
 ## 📄 Licencja
 
